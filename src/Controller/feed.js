@@ -23,3 +23,5 @@ async function index(req, res, next) {
     next(error);
   }
 }
+
+module.exports = {index}

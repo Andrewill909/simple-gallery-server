@@ -4,6 +4,9 @@ const http = require('http');
 const debug = require('debug');
 const config = require('./config');
 
+//? Router
+const feedRouter = require('./Router/feed');
+
 const app = express();
 const debugServer = debug('gallery:server');
 
@@ -15,6 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //? router
+app.use('/api', feedRouter);
 
 //? Default error handler
 app.use((err, req, res, next) => {
