@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const http = require('http');
 const debug = require('debug');
+const cors = require('cors');
 const config = require('./config');
 
 //? Router
@@ -17,6 +18,15 @@ app.use(morgan('combined'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+//? CORS handler
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      return callback(null, true);
+    },
+  })
+);
+
 //? router
 app.use('/api', feedRouter);
 
@@ -24,7 +34,7 @@ app.use('/api', feedRouter);
 app.use((err, req, res, next) => {
   res.status(500).json({
     status: 'ERROR',
-    message: err.message,
+    message: err.isAxiosError ? 'Internal Server Error' : err.message,
   });
 });
 
