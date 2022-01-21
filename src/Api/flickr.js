@@ -8,3 +8,5 @@ function fetchFeed(query) {
   const search = new URLSearchParams({ format: 'json', nojsoncallback: 1, id, tags });
   return axios.get('https://www.flickr.com/services/feeds/photos_public.gne', { params: search });
 }
+
+module.exports = { fetchFeed };
