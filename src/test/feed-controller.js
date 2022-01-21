@@ -38,5 +38,6 @@ describe('Feed Controller - index', function () {
     feedController.index(req, res, nextSpy);
     expect(nextSpy.called).to.be.true;
     done();
+    axiosStub.restore();
   });
 });
