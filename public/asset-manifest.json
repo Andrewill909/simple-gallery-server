@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b87005d7.css",
+    "main.js": "/static/js/main.68858777.js",
+    "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
+    "static/media/RobotoMono-Regular.ttf": "/static/media/RobotoMono-Regular.418a8f9f65ccad0918af.ttf",
+    "static/media/GrandHotel-Regular.ttf": "/static/media/GrandHotel-Regular.ecf0519e05e1b7500b28.ttf",
+    "index.html": "/index.html",
+    "main.b87005d7.css.map": "/static/css/main.b87005d7.css.map",
+    "main.68858777.js.map": "/static/js/main.68858777.js.map",
+    "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b87005d7.css",
+    "static/js/main.68858777.js"
+  ]
+}

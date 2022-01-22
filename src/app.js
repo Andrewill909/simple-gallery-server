@@ -4,6 +4,7 @@ const http = require('http');
 const debug = require('debug');
 const cors = require('cors');
 const config = require('./config');
+const path = require('path');
 
 //? Router
 const feedRouter = require('./Router/feed');
@@ -17,6 +18,7 @@ app.use(morgan('combined'));
 //? parser
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static(path.join(__dirname, '..', 'public')));
 
 //? CORS handler
 app.use(
